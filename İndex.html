@@ -1,0 +1,66 @@
+<! DOCTYPE html >
+< html  lang = " tr " dir = " ltr " >
+  < kafa >
+    < meta  charset = " utf-8 " >
+    < title > Craynwiner </ title >
+    < link  rel = " stil sayfası " href = " style.css " >
+  </ kafa >
+  < vücut >
+    < div  class = " container " >
+        < h1 > Craynwiner </ h1 >
+        < Br >
+        < h2 > Çok Yakında. </ h2 >
+
+        < div  class = " count " >
+          < div  class = " countd " >
+            < span  id = " days " > 00 </ span >
+            GÜN
+          </ div >
+
+          < div  class = " countd " >
+            < span  id = " hours " > 00 </ span >
+            SAAT
+          </ div >
+
+          < div  class = " countd " >
+            < span  id = " minutes " > 00 </ span >
+            SANİYE
+          </ div >
+
+          < div  class = " countd " >
+            < span  id = " seconds " > 00 </ span >
+            SAAT
+          </ div >
+        </ div >
+    </ div >
+
+
+< script  type = " text / javascript " >
+
+  var  count  =  yeni  Tarih ( "Mayıs 10,2020 00:00:00" ) . getTime ( ) ;
+  var  x  =  setInterval ( function ( )  {
+    var  now  =  yeni  Tarih ( ) . getTime ( ) ;
+    var  d  =  sayım  -  şimdi ;
+
+    var  gün  =  Matematik . zemin ( d / ( 1000 * 60 * 60 * 24 ) ) ;
+    var  saat  =  Matematik . kat ( ( d % ( 1000 * 60 * 60 * 24 ) ) / ( 1000 * 60 * 60 ) ) ;
+    var  dakika  =  Matematik . kat ( ( % d ( 1000 * 60 * 60 ) ) / ( 1000 * 60 ) ) ;
+    var  saniye  =  Matematik . kat ( ( d % ( 1000 * 60 ) ) / 1000 ) ;
+
+    belge . getElementById ( "günler" ) . innerHTML  =  gün ;
+    belge . getElementById ( "saat" ) . innerHTML  =  saat ;
+    belge . getElementById ( "dakika" ) . innerHTML  =  dakika ;
+    belge . getElementById ( "saniye" ) . innerHTML  =  saniye ;
+
+    if ( d <= 0 ) {
+      clearInterval ( x ) ;
+    }
+  } , 1000 ) ;
+</ script >
+
+
+
+
+
+  </ gövde >
+</ html >
